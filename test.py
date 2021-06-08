@@ -1,4 +1,5 @@
 import math
+import random
 
 
 #1
@@ -11,6 +12,7 @@ print(a)
 ad = "Vahid"
 soyad = "Afandiyev"
 tam_ad = ad.capitalize() + " " + soyad.capitalize()
+print(f"Salam, {tam_ad}") 
 print(f"Salam, {tam_ad}")  
 
 #3
