@@ -212,12 +212,12 @@ import math
 
 #QUIZ10
 
-a = [9, 7,10]
-b = 0
-if a[b] %2:
-    print(f"{a[b]} is odd")
-else:
-    print(f"{a[b]} is odd")
+# a = [9, 7,10]
+# b = 0
+# if a[b] %2:
+#     print(f"{a[b]} is odd")
+# else:
+#     print(f"{a[b]} is odd")
 
 
 
@@ -225,23 +225,88 @@ else:
 
 
 
+#DAY03 ///////////////
+
+
+#QUIZ01
+
+
+# def sum(*args):
+#     cem = 0
+#     for i in args:
+#         cem += i
+#     return cem
+
+
+# print(sum(5,4,3,2))
+
+
+
+#QUIZ02
+
+
+# def multiply(*args):
+#     z = 1
+#     for i in args:
+#         z *= i
+#     return z
+
+# print(multiply(3,7,2,8))
+
+
+#QUIZ03
+
+
+# def returnDay(a):
+#     days = {
+#         1: "Monday",
+#         2: "Thursday",
+#         3: "Wednsday",
+#         4: "Tuesday",
+#         5: "Friday",
+#         6: "Saturday",
+#         7: "Sunday"
+#     }  
+
+#     if 1 <= a < 8:
+#         z = f"{a} is {days[a]}"
+#     else:
+#         z = None
+#     return z
+
+# print(returnDay(7))
+
+
+#QUIZ04
+
+
+# def lastElement(a):
+#     result = 0
+#     for i in a:
+#         result = i
+#     return result
+
+
+
+# a = [1,4,6,8,9]
+# print(lastElement(a))
+
+
+#QUIZ05
+
+
+
+# def even(a):
+#     evenList = []
+#     for i in a:
+#         if i%2 == 0:
+#             evenList.append(i)
+#         else:
+#             None
+#     return evenList
 
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+# a = [1,2,3,4,5,6,7,8]
+# print(even(a))
