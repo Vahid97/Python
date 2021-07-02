@@ -28,5 +28,7 @@ def testimonials(request):
 def pricing(request):
     return render(request, 'pricing.html')
 
+def practice_areas(request):
+    return render(request, 'practice_areas.html')
 
 

@@ -1,0 +1,26 @@
+>>> from pages.models import *
+>>> cat1 = Category(title='Category 01', image='cat1.png')  
+>>> cat1.save()
+>>> cat2 = Category.objects.create(title='Category 02', image='cat2.png') 
+>>> c_study1 = Case_study.objects.create(title='Case_study 01', image='c_study2.png', description='Health', category=cat1) 
+>>> c_study1.slug='Case_study-1' 
+>>> c_study1.save()
+>>> c_study1.category
+<Category: Category 01>
+>>> c_study1.category.title
+'Category 01'
+>>> c_study1.category.image 
+'cat1.png'
+>>> c_study1.category.created_at
+datetime.datetime(2021, 7, 2, 16, 9, 49, 969205, tzinfo=<UTC>)
+>>> c_study1.category.updated_at 
+>>> cat2.save() 
+>>> c_study2 = Case_study.objects.create(title='Case_study 02', image='c_study1.png', description='Health', category=cat1) 
+>>> cat1.case_studies.all()
+<QuerySet [<Case_study: Case_study 01>, <Case_study: Case_study 02>]>
+>>> Case_study.objects.get(id=1)
+<Case_study: Case_study 01>
+>>> Case_study.objects.filter(id=1) 
+<QuerySet [<Case_study: Case_study 01>]>
+>>> Case_study.objects.filter(title__contains='0') 
+<QuerySet [<Case_study: Case_study 01>, <Case_study: Case_study 02>]>

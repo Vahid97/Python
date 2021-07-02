@@ -13,5 +13,5 @@ urlpatterns = [
     path('contact/', views.contact, name="contact"),
     path('testimonials/', views.testimonials, name="testimonials"),
     path('pricing/', views.pricing, name="pricing"),
-    #path('users/<int:user_id>', user)
+    path('practice_areas/', views.practice_areas, name="practice_areas"),
 ]
