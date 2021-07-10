@@ -19,12 +19,13 @@
 		<section class="section-holder margin-b32">
 			<div class="container">
 				<div class="row">
+					{% for attorney in attorneys %}
 					<div class="col-md-6">
 						<div class="lawyer-holder lawyer-3col">
-							<a href="attorneys-single-page.html"><img src="{% static 'images/team/team-4.jpg' %}" class="img-fluid" alt="" ></a>
-							<div class="lawyer-position">Founder</div>
-							<h2 class="lawyer-title"><a href="attorneys-single-page.html">Sarah Barrett</a></h2>
-							<div class="lawyer-excerpt">Integer imperdiet purus urna, a volutpat turpis feugiat vitae. Proin molestie in metus eu volutpat. Vestibulum vitae orci sit amet.</div>
+							<a href="attorneys-single-page.html"><img src={{attorney.image}} class="img-fluid" alt="" ></a>
+							<div class="lawyer-position">{{attorney.title}}</div>
+							<h2 class="lawyer-title"><a href="attorneys-single-page.html">{{attorney.name}}</a></h2>
+							<div class="lawyer-excerpt">{{attorney.short_description}}}</div>
 							<ul class="lawyer-social">
 								<li><a href="#" target="_blank"><i class="fab fa-twitter"></i></a></li>
 								<li><a href="#" target="_blank"><i class="fab fa-facebook-f"></i></a></li>
@@ -33,7 +34,8 @@
 							</ul>
 						</div>
 					</div>
-					<div class="col-md-6">
+					{% endfor %}
+					{% comment %} <div class="col-md-6">
 						<div class="lawyer-holder lawyer-3col">
 							<a href="attorneys-single-page.html"><img src="{% static 'images/team/team-6.jpg' %}" class="img-fluid" alt="" ></a>
 							<div class="lawyer-position">Senior Partner</div>
@@ -95,7 +97,7 @@
 								<li><a href="#" target="_blank"><i class="fab fa-linkedin-in"></i></a></li>
 							</ul>
 						</div>
-					</div>
+					</div> {% endcomment %}
 				</div>
 				<!-- /row -->
 			</div>

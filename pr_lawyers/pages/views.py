@@ -1,5 +1,6 @@
 from django.shortcuts import render
 from django.http import HttpResponse
+from .models import Attorneys
 
 def home(request):
     return render(request, 'home.html')
@@ -8,6 +9,8 @@ def about(request):
     return render(request, 'about_us.html')
 
 def attorneys(request):
+    attorneys = Attorneys.objects.all()
+    context = {'attorney': attorneys}
     return render(request, 'attorneys.html')
 
 def case_studies(request):

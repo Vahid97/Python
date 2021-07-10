@@ -76,6 +76,7 @@ class Attorneys(models.Model):
     title = models.CharField('Title', max_length=127)
     image = models.ImageField('Image', max_length=127, upload_to='attorneys')
     slug = models.SlugField('Slug', max_length=150)
+    short_description = models.CharField('Short descritioon', max_length=127)
 
     
     created_at = models.DateTimeField(auto_now_add=True)
