@@ -32,14 +32,31 @@
 						<h2 class="section-heading-title margin-b16">Get in Touch with Us</h2>
 						<p>At has mollis audire inermis, vim ex alia equidem platonem, pri eius mutat interesset ei. In minim affert eam, cetero legimus moderatius has at. Te has utroque patrioque vituperata, case eligendi</p>
 						<div id="contact-form-holder">
-							<form method="post" id="contact-form" action='include/contact-process.php'>
+							<form method="POST" id="contact-form" action='#'>
+								{% csrf_token %}
+
 								<div class="row">
+									<div class="col-lg-4 margin-b32">
+										{{form.full_name}}
+									</div>
+									<div class="col-lg-4 margin-b32">
+										{{form.email}}
+									</div>
+									<div class="col-lg-4 margin-b32">
+										{{form.subject}}
+									</div>
+								</div>
+								<div class="margin-b32">
+									{{form.message}}
+								</div>
+
+								{% comment %} <div class="row">
 									<div class="col-lg-4 margin-b32"><input type="text" name="name" class="comm-field" placeholder="Name"/></div>
 									<div class="col-lg-4 margin-b32"><input type="text" name="email" class="comm-field" placeholder="Email"/> </div>
 									<div class="col-lg-4 margin-b32"><input type="text" name="subject" class="comm-field" placeholder="Subject" /> </div>
 								</div>
 								<div class="margin-b32"><textarea name="message" id="msg-contact" rows="5" placeholder="Message"></textarea></div>
-								<p class="antispam">Leave this empty: <input type="text" name="url" /></p>
+								<p class="antispam">Leave this empty: <input type="text" name="url" /></p> {% endcomment %}
 								<p><input type="submit" value="Send message" id="submit"/></p>
 							</form>
 						</div>
